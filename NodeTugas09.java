@@ -1,5 +1,4 @@
 public class NodeTugas09 {
-    
     MahasiswaTugas09 data;
     NodeTugas09 next;
 
