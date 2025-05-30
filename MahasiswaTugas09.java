@@ -1,4 +1,5 @@
 public class MahasiswaTugas09 {
+    
     String nim;
     String nama;
 
