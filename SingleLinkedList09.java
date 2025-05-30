@@ -1,4 +1,5 @@
 public class SingleLinkedList09 {
+    
     NodeMahasiswa09 head, tail;
 
     public boolean isEmpty() {

@@ -1,4 +1,5 @@
 public class Mahasiswa09 {
+    
     String nim, nama, kelas;
     double ipk;
 
