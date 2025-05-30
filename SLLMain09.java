@@ -1,26 +1,33 @@
+import java.util.Scanner;
+
 public class SLLMain09 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         SingleLinkedList09 sll = new SingleLinkedList09();
 
-        Mahasiswa09 mhs1 = new Mahasiswa09("22304001", "Andi", "TI-1A", 3.6);
-        Mahasiswa09 mhs2 = new Mahasiswa09("22304002", "Budi", "TI-1B", 3.4);
-        Mahasiswa09 mhs3 = new Mahasiswa09("22304003", "Citra", "TI-1C", 3.8);
-        Mahasiswa09 mhs4 = new Mahasiswa09("22304004", "Dina", "TI-1D", 3.2);
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlah = sc.nextInt();
+        sc.nextLine(); // Buang newline
 
-        sll.print(); // Linked List Kosong
+        for (int i = 0; i < jumlah; i++) {
+            System.out.println("Mahasiswa ke-" + (i + 1));
+            System.out.print("NIM   : ");
+            String nim = sc.nextLine();
+            System.out.print("Nama  : ");
+            String nama = sc.nextLine();
+            System.out.print("Kelas : ");
+            String kelas = sc.nextLine();
+            System.out.print("IPK   : ");
+            double ipk = sc.nextDouble();
+            sc.nextLine(); // Buang newline
 
-        sll.addFirst(mhs1);
+            Mahasiswa09 mhs = new Mahasiswa09(nim, nama, kelas, ipk);
+            sll.addLast(mhs); // atau sll.addFirst(mhs);
+        }
+
+        System.out.println("\nIsi Linked List:");
         sll.print();
 
-        sll.addLast(mhs2);
-        sll.print();
-
-        sll.insertAfter("Citra", mhs3);
-
-        sll.insertAt(2, mhs4);
-        sll.print();
-
-        
-
+        sc.close();
     }
 }
