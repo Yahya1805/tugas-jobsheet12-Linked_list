@@ -1,4 +1,5 @@
 public class QueueLinkedList {
+    
     NodeTugas09 front, rear;
     int size = 0;
     final int MAX = 10; // batas maksimal antrian
